@@ -16,15 +16,10 @@ The **Bloodborne Save Manager** is designed to help players efficiently manage t
 - Players can create separate profiles, each containing different sets of save files.  
 - Profiles help in organizing **multiple playthroughs, character builds, or progression states**.  
 
-### **Save State Backup and Restore**  
+### **Save State Backup and Loading**  
 - Users can create savestates (snapshots of their current save files) within a selected profile.  
 - At any time, a savestate can be loaded back into the game, restoring progress to a previous point.  
 - Savestates are stored as **complete copies** of the save directory, ensuring no data loss.  
-
-### **Dark Mode & Light Mode (Persistent Setting)**  
-- The app defaults to Dark Mode for a sleek look.  
-- A toggle button allows switching between Dark and Light modes.  
-- The chosen mode is saved and applied on the next app launch.  
 
 ---
 
