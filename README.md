@@ -1,11 +1,11 @@
 # Bloodborne Save Manager  
 
-**NOTE:** This program can be falsely flagged as malware by antivirus software, as it can modify files (copy, paste, and overwrite when loading saves). However, the program is **perfectly safe to use**.
+**NOTE:** This program can be falsely flagged as malware by antivirus software, as it can modify your save files (copy, paste, and overwrite when loading saves). However, the program is **perfectly safe to use**.
 
 The **Bloodborne Save Manager** is designed to help players efficiently manage their save files for **Bloodborne**. It provides an easy-to-use interface for **backing up, restoring, and organizing multiple game saves**, allowing users to:  
 
 - Switch between different progress states.  
-- Practice specific areas and bosses.  
+- Practise specific areas and bosses.  
 - Retry sections of the game effortlessly.  
 
 ---
