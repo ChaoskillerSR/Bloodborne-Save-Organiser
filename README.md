@@ -36,9 +36,10 @@ The **Bloodborne Save Manager** is designed to help players efficiently manage t
 - Each profile acts as a **container** for different game save backups, useful for creating categories or groups of savestates.  
 
 ### **Saving and Restoring Progress**  
-- Select a profile and click **"Create Savestate"** to make a snapshot of your current save.  
-- Select a saved state and click **"Load Savestate"** to restore the selected save.  
-- Click **"Delete Savestate"** to remove an unwanted save.  
+1. Quit out to the title screen
+2. Select a profile and click **"Create Savestate"** to make a snapshot of your current save.
+3. Once you have selected the desired savestate in your profile, select a saved state and click **"Load Savestate"** to restore the selected save. 
+- At any time, click **"Delete Savestate"** to remove an unwanted save.  
 
 ### **Theme Customization**  
 - Click the theme toggle button to switch between Dark Mode and Light Mode.  
