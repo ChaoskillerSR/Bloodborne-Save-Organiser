@@ -28,9 +28,8 @@ The **Bloodborne Save Manager** is designed to help players efficiently manage t
 ### **Setup Save and Profile Directories**  
 1. To run the program, run **bloodborne_save_manager.exe** inside of the **dist** folder.
 2. On first launch, select:  
-   - The **game’s save directory** (typically found inside `user/savedata` within your `ShadPS4` folder).  
+   - The **game’s save directory** (typically `user/savedata` within your `ShadPS4` folder).  
    - A **profile directory** (any folder of your choice).  
-3. These paths are stored in the **configuration file (`config.json`)** for future sessions.  
 
 ### **Creating and Managing Profiles**  
 - Click **"Create Profile"** to make a new profile folder.  
@@ -43,4 +42,3 @@ The **Bloodborne Save Manager** is designed to help players efficiently manage t
 
 ### **Theme Customization**  
 - Click the theme toggle button to switch between Dark Mode and Light Mode.  
-- The app remembers your preference for future launches.  
