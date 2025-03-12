@@ -351,5 +351,6 @@ tk.Button(root, text="Create Savestate", command=create_savestate).pack()
 tk.Button(root, text="Delete Savestate", command=delete_savestate).pack()
 
 load_config()
+root.after(100, load_profiles)
 
 root.mainloop()
