@@ -331,6 +331,7 @@ with open(CONFIG_FILE, "r") as file:
     config_data = json.load(file)
     load_save_keybind = config_data["load_save_keybind"]
     create_save_keybind = config_data["create_save_keybind"]
+    set_keybinds()
 keybinds_button = tk.Button(root, text="Set Keybinds", command=lambda: open_config_window())
 keybinds_button.pack()
 
