@@ -87,11 +87,13 @@ def load_selected_savestate(root, profile_listbox, savestate_listbox, profile_en
     profile_path = os.path.join(profile_entry.get(), selected_profile)
     savestate_path = os.path.join(profile_path, selected_savestate)
     save_path = save_entry.get()
-
     if os.path.exists(save_path):
-        shutil.rmtree(save_path)
-        shutil.copytree(savestate_path, save_path)
-        notification.config(text=f"Savestate '{selected_savestate}' loaded successfully!")
-        # root.after(3000, lambda: notification.config(text=""))
+        # The save directory contains a single folder named "1", which I use to check if the folder is valid
+        if os.listdir(save_path) == ['1']:
+            shutil.rmtree(save_path)
+            shutil.copytree(savestate_path, save_path)
+            notification.config(text=f"Savestate '{selected_savestate}' loaded successfully!")
+        else:
+            messagebox.showerror("Error", "Selected game save directory is not a Bloodborne save directory!")
     else:
         messagebox.showerror("Error", "Invalid game save directory!")
