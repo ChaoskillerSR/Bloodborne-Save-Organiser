@@ -1,6 +1,7 @@
 # Bloodborne Save Manager  
 
 **NOTE:** This program can be falsely flagged as malware by antivirus software, as it can modify your save files (copy, paste, and overwrite when loading saves). However, the program is **perfectly safe to use**.
+**NOTE:** THE TOOL DOES **NOT** WORK WITH THE DIEGO BRANCH OF SHADPS4 CURRENTLY, ONLY USE WITH THE MAIN BRANCH
 
 The **Bloodborne Save Manager** is designed to help players efficiently manage their save files for **Bloodborne**. It provides an easy-to-use interface for **backing up, restoring, and organising multiple game saves**, allowing users to:  
 
