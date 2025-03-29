@@ -39,20 +39,21 @@ def create_savestate(root, savestate_listbox, profile_listbox, profile_entry, sa
     if not os.path.exists(save_path):
         messagebox.showerror("Error", "Invalid save directory!")
         return
+    if os.listdir(save_path) == ['1']:
+        savestate_name = simpledialog.askstring("Create Savestate", "Enter savestate name:")
+        if not savestate_name:
+            return
 
-    savestate_name = simpledialog.askstring("Create Savestate", "Enter savestate name:")
-    if not savestate_name:
-        return
+        savestate_path = os.path.join(profile_path, savestate_name)
+        if os.path.exists(savestate_path):
+            messagebox.showerror("Error", "Savestate already exists!")
+            return
 
-    savestate_path = os.path.join(profile_path, savestate_name)
-    if os.path.exists(savestate_path):
-        messagebox.showerror("Error", "Savestate already exists!")
-        return
-
-    shutil.copytree(save_path, savestate_path)
-    update_savestates(root, savestate_listbox, profile_listbox, profile_entry)
-    notification.config(text=f"Savestate '{savestate_name}' created!")
-    # root.after(3000, lambda: notification.config(text=""))
+        shutil.copytree(save_path, savestate_path)
+        update_savestates(root, savestate_listbox, profile_listbox, profile_entry)
+        notification.config(text=f"Savestate '{savestate_name}' created!")
+    else:
+        messagebox.showerror("Error", "Selected game save directory is not a Bloodborne save directory!")
 
 
 def delete_savestate(root, dark_mode_var, profile_listbox, savestate_listbox, profile_entry, notification):
