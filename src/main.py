@@ -16,6 +16,7 @@ def save_config(profile_listbox, profile_entry):
         "save_directory": save_entry.get(),
         "profile_directory": profile_entry.get(),
         "dark_mode": dark_mode_var.get(),
+        "global_hotkeys_enabled": global_hotkeys_enabled.get(),
         "load_save_keybind": load_save_keybind,
         "create_save_keybind": create_save_keybind
     }
@@ -197,6 +198,7 @@ profile_entry.pack(side='left', padx=(10, 10))
 tk.Button(profile_entry_frame, text="Browse", command=browse_profile).pack(side='right', padx=(10, 10))
 
 dark_mode_var = tk.BooleanVar(value=True)
+global_hotkeys_enabled = tk.BooleanVar(value=False)
 
 listboxes_frame = tk.Frame(root)
 listboxes_frame.pack(fill='both', expand=True)
@@ -280,6 +282,7 @@ profile_listbox.bind("<ButtonRelease-1>", lambda event: save_management.update_s
 
 with open(CONFIG_FILE, "r") as file:
     config_data = json.load(file)
+    global_hotkeys_enabled.set(config_data["global_hotkeys_enabled"])
     load_save_keybind = config_data["load_save_keybind"]
     create_save_keybind = config_data["create_save_keybind"]
     config.set_keybinds(root, savestate_listbox, profile_listbox, profile_entry, save_entry, notification)

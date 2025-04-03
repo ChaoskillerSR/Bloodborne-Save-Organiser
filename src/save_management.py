@@ -3,6 +3,7 @@ from tkinter import messagebox, simpledialog
 import os
 import shutil
 
+savestate_naming_window_open = False
 
 def update_savestates(root, savestate_listbox, profile_listbox, profile_entry):
     """Ensures the savestate list updates when switching profiles."""
@@ -28,6 +29,10 @@ def load_savestates(savestate_listbox, profile_listbox, profile_entry):
 
 def create_savestate(root, savestate_listbox, profile_listbox, profile_entry, save_entry, notification):
     """Creates a new savestate inside the selected profile."""
+    global savestate_naming_window_open
+    if savestate_naming_window_open:
+        return
+
     selected_profile = profile_listbox.get(tk.ACTIVE)
     if not selected_profile:
         messagebox.showerror("Error", "Select a profile first!")
@@ -40,7 +45,9 @@ def create_savestate(root, savestate_listbox, profile_listbox, profile_entry, sa
         messagebox.showerror("Error", "Invalid save directory!")
         return
     if os.listdir(save_path) == ['1']:
+        savestate_naming_window_open = True
         savestate_name = simpledialog.askstring("Create Savestate", "Enter savestate name:")
+        savestate_naming_window_open = False
         if not savestate_name:
             return
 
@@ -78,6 +85,10 @@ def delete_savestate(root, dark_mode_var, profile_listbox, savestate_listbox, pr
 
 def load_selected_savestate(root, profile_listbox, savestate_listbox, profile_entry, save_entry, notification):
     """Loads the selected savestate into the game save folder."""
+    global savestate_naming_window_open
+    if savestate_naming_window_open:
+        return
+
     selected_profile = profile_listbox.get(tk.ACTIVE)
     selected_savestate = savestate_listbox.get(tk.ACTIVE)
 
