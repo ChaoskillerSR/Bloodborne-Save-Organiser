@@ -4,6 +4,8 @@
 
 **NOTE:** THE TOOL DOES **NOT** WORK WITH THE DIEGO BRANCH OF SHADPS4 CURRENTLY, ONLY USE WITH THE MAIN BRANCH
 
+**NOTE:** To use global hotkeys, you must run the program as administrator.
+
 The **Bloodborne Save Manager** is designed to help players efficiently manage their save files for **Bloodborne**. It provides an easy-to-use interface for **backing up, restoring, and organising multiple game saves**, allowing users to:  
 
 - Switch between different progress states.  
